@@ -68,7 +68,9 @@ RESETS
   src: url(/assets/fonts/MonumentExtended-Regular.otf);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "MonumentExtended", sans-serif;
   font-weight: inherit;
 }
@@ -76,7 +78,7 @@ h1, h2, h3 {
 body {
   font-family: "Montserrat", sans-serif;
   background-color: black;
-  color: #EDECEA;
+  color: #edecea;
 }
 
 main {
@@ -130,7 +132,7 @@ section {
   right: 100%;
   height: 100%;
   width: 100%;
-  background: #EDECEA;
+  background: #edecea;
 }
 
 .pace.pace-inactive {
@@ -152,7 +154,7 @@ nav#main-nav {
 }
 
 nav#main-nav a {
-  color: #EDECEA;
+  color: #edecea;
   text-decoration: none;
 }
 
@@ -239,8 +241,8 @@ section#hero h2 {
   line-height: 77px;
   text-align: center;
   text-transform: uppercase;
-  -webkit-text-stroke: 1px #EDECEA;
-  -webkit-text-fill-color: #EDECEA;
+  -webkit-text-stroke: 1px #edecea;
+  -webkit-text-fill-color: #edecea;
 }
 
 section#description {
@@ -318,17 +320,17 @@ div.column:first-child h2 {
 }
 
 .slide .progress-bar:after {
-  content: '.';
+  content: ".";
   visibility: hidden;
 }
 
 .slide .progress-value {
-  background-color: #EDECEA;
+  background-color: #edecea;
   width: 100%;
   height: 100%;
   opacity: 0;
-  -webkit-transition: opacity ease-in .3s;
-  transition: opacity ease-in .3s;
+  -webkit-transition: opacity ease-in 0.3s;
+  transition: opacity ease-in 0.3s;
 }
 
 .slide .p-wrapper {
@@ -336,10 +338,10 @@ div.column:first-child h2 {
   overflow: hidden;
   -webkit-transition: max-height ease-in-out;
   transition: max-height ease-in-out;
-  -webkit-transition-duration: .3s;
-          transition-duration: .3s;
-  -webkit-transition-delay: .3s;
-          transition-delay: .3s;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
   display: block;
 }
 
@@ -348,7 +350,7 @@ div.column:first-child h2 {
 }
 
 .slide.active {
-  color: #EDECEA;
+  color: #edecea;
 }
 
 .slide.active .p-wrapper {
