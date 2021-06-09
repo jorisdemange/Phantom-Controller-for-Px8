@@ -349,6 +349,10 @@ div.column:first-child h2 {
   margin-top: 10px;
 }
 
+.slide h3 {
+  cursor: pointer;
+}
+
 .slide.active {
   color: #edecea;
 }

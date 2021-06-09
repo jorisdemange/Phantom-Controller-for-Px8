@@ -307,6 +307,10 @@ div.column:first-child {
   p {
     margin-top: 10px;
   }
+
+  h3 {
+    cursor: pointer;
+  }
 }
 .slide.active {
   color: $offwhite;
