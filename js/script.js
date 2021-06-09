@@ -12,6 +12,37 @@ tl.from(".anim-nav2", { opacity: 0 }, "-=.5");
 
 ///// SLIDE 2
 
+// Switch .active class on click
+var slides = ".slider .slide";
+var amountOfSlides = $(slides).length;
+
+function openSlide(el) {
+  $(slides).removeClass("active");
+  $(el).addClass("active");
+  tlprogress = gsap.timeline({
+    defaults: { duration: 5 },
+    delay: 0.2,
+    onComplete: gotoNext,
+  });
+  tlprogress.fromTo(
+    $(el).find(".progress-value"),
+    { height: "0%" },
+    { height: "100%", ease: "none" }
+  );
+}
+
+function gotoNext() {
+  let activeSlide = ".slider .active";
+  var indexActiveSlide = $(slides).index($(activeSlide));
+  if (indexActiveSlide + 1 < amountOfSlides) {
+    // Go to next
+    openSlide($(activeSlide).next());
+  } else {
+    // go to first
+    openSlide($(activeSlide).siblings().first());
+  }
+}
+
 /* Second video plays only when entering the viewport. 
 Conflict with jQuery, to debug
 
@@ -26,10 +57,10 @@ $('#video2').each(function(){
 })
 */
 
-// Switch .active class on click
-var selector = ".slider .slide";
-
-$(selector).on("click", function () {
-  $(selector).removeClass("active");
-  $(this).addClass("active");
+ScrollTrigger.create({
+  trigger: "#video2",
+  onEnter: () => "#video2".play(),
+  onEnterBack: () => "#video2".play(),
+  onLeave: () => "#video2".restart(),
+  onLeaveBack: () => "#video2".restart(),
 });
