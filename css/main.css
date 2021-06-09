@@ -313,13 +313,13 @@ div.column:first-child h2 {
           align-items: stretch;
 }
 
-.slide .progress-bar {
+.slide .progress {
   background-color: #303030;
   width: 2px;
   margin-right: 30px;
 }
 
-.slide .progress-bar:after {
+.slide .progress:after {
   content: ".";
   visibility: hidden;
 }

@@ -279,12 +279,12 @@ div.column:first-child {
   justify-content: flex-start;
   align-items: stretch;
 
-  .progress-bar {
+  .progress {
     background-color: $dark;
     width: 2px;
     margin-right: 30px;
   }
-  .progress-bar:after {
+  .progress:after {
     content: ".";
     visibility: hidden;
   }
