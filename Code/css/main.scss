@@ -191,6 +191,7 @@ nav#main-nav {
   margin-left: auto;
   li {
     opacity: 0.3;
+    transition: opacity ease-in-out 0.3s;
   }
   li.active {
     opacity: 1;
