@@ -235,7 +235,7 @@ section#hero h2 {
 }
 
 section#description {
-  height: 100vh;
+  min-height: 100vh;
   padding-top: 200px;
   overflow: hidden;
 }
@@ -316,7 +316,7 @@ div.column:first-child h2 {
 .slide .progress-value {
   background-color: #edecea;
   width: 100%;
-  height: 100%;
+  height: 0%;
   opacity: 0;
   -webkit-transition: opacity ease-in 0.3s;
   transition: opacity ease-in 0.3s;
