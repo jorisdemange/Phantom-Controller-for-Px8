@@ -12,7 +12,7 @@ tl.from(".anim-nav2", { opacity: 0 }, "-=.5");
 
 ///// SLIDE 2
 
-// Switch .active class on click
+// Animating the carousel
 var slides = ".slider .slide";
 var amountOfSlides = $(slides).length;
 
@@ -46,8 +46,8 @@ function gotoNext() {
   }
 }
 
-/* Second video plays only when entering the viewport. 
-Conflict with jQuery, to debug
+// Starting the video and carousel when entering the viewport
+/* Conflict with jQuery, to debug
 
 $('#video2').each(function(){
     if ($(this).is(":in-viewport")) {
@@ -61,9 +61,10 @@ $('#video2').each(function(){
 */
 
 ScrollTrigger.create({
-  markers: true,
+  //markers: true,
   scroller: "main",
   trigger: ".slider",
+  start: "top center",
   onEnter: openSlide($(".slider .slide:first-of-type")),
   //  onEnter: () => "#video2".play(),
 });
