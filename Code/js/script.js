@@ -16,7 +16,7 @@ tl.from(".anim-nav2", { opacity: 0 }, "-=.5");
 var slides = ".slider .slide";
 var amountOfSlides = $(slides).length;
 
-function openSlide(el) {
+const openSlide = function (el) {
   if (typeof tlprogress !== "undefined") {
     tlprogress.kill();
   }
@@ -32,39 +32,26 @@ function openSlide(el) {
     { height: "0%" },
     { height: "100%", ease: "none" }
   );
-}
+};
 
-function gotoNext() {
+const gotoNext = function () {
   let activeSlide = ".slider .active";
   var indexActiveSlide = $(slides).index($(activeSlide));
   if (indexActiveSlide + 1 < amountOfSlides) {
-    // Go to next
     openSlide($(activeSlide).next());
   } else {
-    // go to first
     openSlide($(activeSlide).siblings().first());
   }
-}
+};
 
 // Starting the video and carousel when entering the viewport
-/* Conflict with jQuery, to debug
-
-$('#video2').each(function(){
-    if ($(this).is(":in-viewport")) {
-        $(this)[0].play();
-    } else {
-        $(this)[0].pause();
-        $(this)[0].currentTime = 0;
-        $(this)[0].load();
-    }
-})
-*/
-
 ScrollTrigger.create({
-  //markers: true,
   scroller: "main",
-  trigger: ".slider",
-  start: "top center",
-  onEnter: openSlide($(".slider .slide:first-of-type")),
-  //  onEnter: () => "#video2".play(),
+  trigger: "#description",
+  start: "top 20%",
+  onToggle: () => {
+    openSlide($(".slider .slide:first-of-type"));
+    $("#video2").get(0).play();
+  },
+  once: true,
 });
