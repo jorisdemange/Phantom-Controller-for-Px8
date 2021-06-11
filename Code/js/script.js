@@ -58,7 +58,7 @@ ScrollTrigger.create({
   scroller: "main",
   trigger: "#description",
   start: "top 20%",
-  onToggle: () => {
+  onEnter: () => {
     openSlide($(".slider .slide:first-of-type"));
     $("#video2").get(0).play();
   },
