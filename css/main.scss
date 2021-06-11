@@ -52,25 +52,9 @@ img {
   display: block;
 }
 
-/* Remove all animations and transitions for people that prefer not to see them */
-/*
-@media (prefers-reduced-motion: reduce) {
-	* {
-	  animation-duration: 0.01ms !important;
-	  animation-iteration-count: 1 !important;
-	  transition-duration: 0.01ms !important;
-	  scroll-behavior: auto !important;
-	}
-}
-*/
-
 /* --------------------
 RESETS 
 -------------------- */
-
-// DEV TOOLS HERE, TO BE DELETED
-//
-// DEV TOOLS HERE, TO BE DELETED
 
 // DEFINE SASS VARIABLES
 $offwhite: #edecea;
