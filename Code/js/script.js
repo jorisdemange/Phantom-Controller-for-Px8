@@ -1,3 +1,12 @@
+///// NAVIGATION
+
+var languages = ".languages li";
+
+$(languages).click(function () {
+  $(languages).removeClass("active");
+  $(this).addClass("active");
+});
+
 ///// SLIDE 1
 var tl = gsap.timeline({ defaults: { duration: 1.2 }, delay: 1.7 });
 
