@@ -17,6 +17,9 @@ var slides = ".slider .slide";
 var amountOfSlides = $(slides).length;
 
 function openSlide(el) {
+  if (typeof tlprogress !== "undefined") {
+    tlprogress.kill();
+  }
   $(slides).removeClass("active");
   $(el).addClass("active");
   tlprogress = gsap.timeline({
@@ -58,9 +61,9 @@ $('#video2').each(function(){
 */
 
 ScrollTrigger.create({
-  trigger: "#video2",
-  onEnter: () => "#video2".play(),
-  onEnterBack: () => "#video2".play(),
-  onLeave: () => "#video2".restart(),
-  onLeaveBack: () => "#video2".restart(),
+  markers: true,
+  scroller: "main",
+  trigger: ".slider",
+  onEnter: openSlide($(".slider .slide:first-of-type")),
+  //  onEnter: () => "#video2".play(),
 });
