@@ -226,7 +226,7 @@ section#hero {
 ////// SLIDE 2 - "DESCRIPTION"
 
 section#description {
-  height: 100vh;
+  min-height: 100vh;
   padding-top: 200px;
   overflow: hidden;
   & > div.wrapper {
@@ -275,7 +275,7 @@ div.column:first-child {
   .progress-value {
     background-color: $offwhite;
     width: 100%;
-    height: 100%;
+    height: 0%;
     opacity: 0;
     transition: opacity ease-in 0.3s;
   }
